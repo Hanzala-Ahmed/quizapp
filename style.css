@@ -1,0 +1,390 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url(./images/quiz1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quizDiv {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quizForm {
+  border: 2px solid #0f2027;
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+}
+
+.formHeading {
+  background-color: #0f2027;
+  width: 100% !important;
+  padding: 8px;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 50px !important;
+}
+
+.formHeading h1 {
+  margin: 4px 0px;
+}
+
+.formHeading span {
+  margin: 4px 0px;
+  font-size: 14px;
+}
+
+.quizForm div {
+  width: 40%;
+}
+
+.quizForm div input {
+  background-color: #0f2027;
+  color: whitesmoke;
+  width: 100%;
+  height: 50px;
+  display: block;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin: 10px 0px;
+  box-shadow: 1px 1px 5px white;
+}
+
+.quizForm div input::placeholder {
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+.quizForm div small {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  color: rgba(255, 0, 0, 0.856);
+  font-size: small;
+}
+
+.quizForm div button {
+  width: 120px;
+  height: 40px;
+  display: block;
+  margin: 10px 0px 10px auto;
+  background-color: #0f2027;
+  color: whitesmoke;
+  font-size: large;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.quizForm.hide {
+  display: none;
+}
+
+.quizStartBtn {
+  width: 160px;
+  padding: 8px;
+}
+
+.quizStartBtn button {
+  width: 100%;
+  height: 40px;
+  outline: none;
+  border: none;
+  background-color: #0f2027;
+  color: white;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.quizStartBtn.hide {
+  display: none;
+}
+
+.questBox {
+  width: 80%;
+  border-radius: 20px;
+}
+
+.questBox.hide {
+  display: none;
+}
+
+.userInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  background-color: #0f2027;
+  border-radius: 20px 20px 0 0;
+  color: whitesmoke;
+}
+
+.userName p {
+  margin: 2px 0px 20px 0px;
+}
+
+.timer {
+  font-size: 16px;
+  display: flex;
+}
+
+.timer p {
+  height: fit-content;
+  color: #ff4b2b;
+  margin: 0px 8px 0px 8px;
+}
+
+.question {
+  background-color: #0f2027;
+  opacity: 0.8;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.question h2 {
+  width: 100%;
+  padding: 8px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.question ul {
+  list-style: none;
+  width: 80%;
+}
+
+.question ul li {
+  background-color: white;
+  width: 100%;
+  color: #0f2027;
+  font-size: 18px;
+  padding: 10px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.question ul li.disabled {
+  pointer-events: none;
+}
+
+.question ul li.success {
+  background-color: #22ffb2;
+  color: #0f2027;
+  font-weight: bolder;
+}
+
+.question ul li.wrong {
+  background-color: #ff4b2b;
+}
+
+.quizFooter {
+  width: 100%;
+  background-color: #0f2027;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0px 0px 20px 20px;
+}
+
+.quizFooter button {
+  width: fit-content;
+  height: fit-content;
+  background-color: whitesmoke;
+  color: #0f2027;
+  font-size: 14px;
+  padding: 7px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 0px 20px 0px 0px;
+}
+
+#quesNum {
+  color: whitesmoke;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.resultBox {
+  background-image: url(./images/congrats.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  width: 60%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.resultBox.hide {
+  display: none;
+}
+
+.congratsHeading {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  opacity: 0.8;
+  width: fit-content;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.congratsHeading h1 {
+  color: #0f2027;
+  font-size: 30px;
+  margin: 10px 5px;
+}
+
+.congratsHeading p {
+  margin: 10px 5px;
+  color: white;
+}
+
+.rightOption {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 5px;
+  align-items: center;
+  padding: 10px;
+}
+
+.rightOption p {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  color: #0f2027;
+  font-weight: bolder;
+}
+
+.rightOption p i {
+  font-size: 25px;
+  margin: 0 5px;
+}
+
+.resetBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px 5px;
+}
+
+.resetBtn button {
+  background-color: #0f2027;
+  width: 120px;
+  height: 40px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: whitesmoke;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  .quizDiv {
+    margin: 20px 0px;
+  }
+
+  .quizForm div {
+    width: 90%;
+  }
+
+  .quizForm {
+    width: 100% !important;
+    border: none;
+  }
+
+  .questBox {
+    width: 100%;
+  }
+
+  .formHeading {
+    border-radius: 0px;
+  }
+
+  .question ul {
+    width: 100%;
+  }
+
+  .userInfo {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 0px;
+  }
+
+  .quizFooter {
+    border-radius: 0px;
+  }
+
+  .resultBox {
+    width: 90%;
+  }
+
+  .congratsHeading{
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .congratsHeading h1 {
+    font-size: 24px;
+  }
+
+  .rightOption {
+    flex-wrap: wrap;
+  }
+
+  .rightOption p {
+    margin: 14px 10px;
+  }
+
+  .userName {
+    width: 100%;
+  }
+}

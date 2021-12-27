@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ APP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/207ef960a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="quizDiv">
+        <div class="quizForm">
+            <div class="formHeading">
+                <h1>QUIZ FORM</h2>
+                <span>Please submit form below.</span>
+            </div>
+
+            <div>
+                <input type="text" id="formName" placeholder="Your Name...">
+                <small id="formNameError"></small>
+            </div>
+
+            <div>
+                <input type="text" id="formEmail" placeholder="Your Email Address...">
+                <small id="formEmailError"></small>
+            </div>
+
+            <div>
+                <input type="text" id="formCell" placeholder="Your Cell Number...">
+                <small id="formCellError"></small>
+            </div>
+
+            <div>
+                <input type="text" id="formSchool" placeholder="Your Institute Name...">
+                <small id="formSchoolError"></small>
+            </div>
+
+            <div>
+                <button onclick="onSubmit()">Submit</button>
+            </div>
+        </div>
+
+
+
+
+        <div class="quizStartBtn hide">
+            <button id="quizBtn" onclick="timer()">Start quiz</button>
+        </div>
+
+
+        <!-- /////Quiz option box START//// -->
+
+        <div class="questBox hide">
+
+            <div class="userInfo">
+                <div class="userName">
+                    <p id="setUserName"></p>
+                    <p id="setEmail"></p>
+                </div>
+                <div class="timer">
+                    <p id="min">00</p>
+                    <p id="sec">00</p>
+                </div>
+
+            </div>
+
+            <div class="question">
+
+                <h2 id="quizquestion">1. what is the capital of pakistan?</h2>
+                <img src="" alt="">
+                <ul class="optionUl">
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                </ul>
+            </div>
+
+            <div class="quizFooter">
+
+                <div id="quesNum">
+                </div>
+
+                <div class="nextQues">
+                    <button onclick="nextQuestion()" id="nextQuest">NexT Question</button>
+                </div>
+
+                </div>
+
+
+        </div>
+
+
+
+        <!-- /////Quiz option box END//// -->
+
+
+            <!-- //////result BOX START//// -->
+            <div class="resultBox hide" id="resultMainBox">
+
+                <div class="congratsHeading">
+                    <h1>Congratulations!</h1>
+                </div>
+
+                <div class="rightOption" >
+                    <p id="rightCount">
+                    <i class="fas fa-check-circle" style="color: rgb(26, 206, 26);"></i>12 Corrects</p>
+                <p id="wrongCount">
+                    <i class="fas fa-times-circle" style="color: rgb(207, 31, 31);"></i>5 Wrong</p>
+                </div>
+                <div class="resetBtn">
+                    <button onclick="window.location.reload()"> Reset Quiz</button>
+                </div>
+            </div>
+
+
+            <!-- //////result BOX END//// -->
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>
